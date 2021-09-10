@@ -13,7 +13,11 @@ connectDB();
 // }
 //app.use(cors(corsoption));
 app.use(express.static('public'));
-// template engine
+// template engine 
+app.use(express.static('./client2')) // relative path of client-side code
+app.get('*', function(req, res) {
+    res.sendFile('index.html', { root: __dirname })
+})
 app.use(express.json());
 app.set('views', path.join(__dirname,'/views'));
 app.set('view engine','ejs');

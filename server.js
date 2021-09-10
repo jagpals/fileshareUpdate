@@ -8,10 +8,10 @@ const connectDB = require('./config/db');
 connectDB();
 
 // cors 
-const corsoptions={
-    origin: ['http://localhost:3000','http://localhost:5500','http://localhost:8080']
-}
-app.use(cors(corsoption));
+// const corsoptions={
+//     origin: ['http://localhost:3000','http://localhost:5500','http://localhost:8080']
+// }
+//app.use(cors(corsoption));
 app.use(express.static('public'));
 // template engine
 app.use(express.json());

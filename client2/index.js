@@ -20,8 +20,8 @@ const copyBtn = document.querySelector("#copyBtn");
  const host = "http://sharefile-s.herokuapp.com"
 //const host="http://localhost:3000"
 
-const uploadURL = `${host}/api/files`;
-const emailURL = `${host}/api/files/send`;
+const uploadURL = `${host}/api/files/`;
+const emailURL = `${host}/api/files/send/`;
 
 dropZone.addEventListener("dragover",(e)=>{
     e.preventDefault();

@@ -17,7 +17,7 @@ const sharingContainer=document.querySelector(".sharing-container");
 
 const copyBtn = document.querySelector("#copyBtn");
 
- const host = "http://sharefile-s.herokuapp.com"
+ const host = "https://sharefile-s.herokuapp.com"
 //const host="http://localhost:3000"
 
 const uploadURL = `${host}/api/files/`;

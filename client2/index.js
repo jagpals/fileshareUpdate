@@ -18,12 +18,12 @@ const sharingContainer=document.querySelector(".sharing-container");
 const copyBtn = document.querySelector("#copyBtn");
 
  const host = "https://sharefile-s.herokuapp.com"
-//const host="http://localhost:3000"
+// const host="http://localhost:8080"
 
 const uploadURL = `${host}/api/files/`;
 const emailURL = `${host}/api/files/send/`;
 
-dropZone.addEventListener("dragover",(e)=>{
+dropZone.addEventListener("dragover", (e)=>{
     e.preventDefault();
     if(!dropZone.classList.contains("dragged"))
     {   
@@ -95,8 +95,8 @@ const updateProgress = (e) =>{
     console.log(percent);
     bgProgress.style.width = `${percent}%`;
     progressPercent.innerText=percent;
-    console.log(`scaleX(${percent/100})`);
-    progressBar.style.transform=`scaleX(${percent/100})`;
+    // console.log(`scaleX(${percent/100})`);
+    progressBar.style.transform = `scaleX(${percent/100})`;
 }
 
 const onUploadSuccess=({file:url})=>{
@@ -141,13 +141,13 @@ emailForm.addEventListener('submit',(e)=>{
 let toastTimer;
 // the toast function
 const showToast = (msg) => {
-    console.log('chl');
+    // console.log('chl');
   clearTimeout(toastTimer);
   toast.innerText = msg;
   toast.classList.add("show");
   toastTimer = setTimeout(() => {
     toast.classList.remove("show");
-    console.log('chl rha hoo');
+    // console.log('chl rha hoo');
   }, 2000);
 };
   

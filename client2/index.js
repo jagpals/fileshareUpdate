@@ -114,8 +114,8 @@ emailForm.addEventListener('submit',(e)=>{
      const url = fileURLInput.value;
     const formData = {
         uuid:url.split("/").splice(-1,1)[0],
-        emailTo:emailForm.elements["from-email"].value,
-        emailFrom:emailForm.elements["to-email"].value
+        emailFrom:emailForm.elements["from-email"].value,
+        emailTo:emailForm.elements["to-email"].value
     };
 
     console.table(formData);
